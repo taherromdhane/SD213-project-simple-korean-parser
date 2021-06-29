@@ -1,0 +1,49 @@
+* parse 저 작은 소년 밥을 먹다.
+  저:NNG;작:VA;은:ETM;소년:NNG;밥:NNG;을:JKO;먹:VV;다:EF;.:SF
+  mapped to [('저', 'NNG'), ('작', 'VA'), ('은', 'ETM'), ('소년', 'NNG'), ('밥', 'NNG'), ('을', 'JKO'), ('먹', 'VV'), ('다', 'EF'), ('.', 'SF')]
+['저:NNG', '작:VA', '은:ETM', '소년:NNG', '밥:NNG', '을:JKO', '먹:VV', '다:EF', '.:SF']
+Sentence (
+  MainClause (
+    Phrase (
+      NounPhrase (
+        SimpleNounPhrase (
+          Noun (
+            SimpleNoun (
+              저:NNG))))))
+    Phrase (
+      ObjectPhrase (
+        NounPhrase (
+          SimpleNounPhrase (
+            AdjectivalPhrase (
+              Adjective (
+                VerbPhrase (
+                  Verb (
+                    DescriptiveVerb (
+                      작:VA))))))
+                AdjectiveFormingSuffix (
+                  은:ETM)))))
+              Noun (
+                SimpleNoun (
+                  소년:NNG))))))
+            Noun (
+              SimpleNoun (
+                밥:NNG))))))
+        을:JKO)))
+    Predicate (
+      VerbPhrase (
+        Verb (
+          SimpleVerb (
+            먹:VV)))))
+      EndingSuffix (
+        다:EF))))
+parse tree :  Sentence [MainClause [Phrase [NounPhrase [SimpleNounPhrase [Noun [SimpleNoun [저:NNG]]]]], Phrase [ObjectPhrase [NounPhrase [SimpleNounPhrase [AdjectivalPhrase [Adjective [VerbPhrase [Verb [DescriptiveVerb [작:VA]]], AdjectiveFormingSuffix [은:ETM]], Noun [SimpleNoun [소년:NNG]]], Noun [SimpleNoun [밥:NNG]]]], 을:JKO]], Predicate [VerbPhrase [Verb [SimpleVerb [먹:VV]]], EndingSuffix [다:EF]]]]
+[('저', 'NNG'), ('작', 'VA'), ('은', 'ETM'), ('소년', 'NNG'), ('밥', 'NNG'), ('을', 'JKO'), ('먹', 'VV'), ('다', 'EF'), ('.', 'SF')]
+word definitions :
+ {'저': 'that', '작': 'to be small', '소년': 'boy', '밥': 'meal', '먹': 'to eat'}
+  Sentence [Main Clause [Phrase [Noun Phrase [Simple Noun Phrase [Noun [Simple Noun [저:NNG]]]]], Phrase [Object Phrase [Noun Phrase [Simple Noun Phrase [Adjectival Phrase [Adjective [Verb Phrase [Verb [Descriptive Verb [작:VA]]], Adjective Forming Suffix [은:ETM]], Noun [Simple Noun [소년:NNG]]], Noun [Simple Noun [밥:NNG]]]], 을:JKO]], Predicate [Verb Phrase [Verb [Simple Verb [먹:VV]]], Ending Suffix [다:EF]]]]
+{'type': 'tree', 'tag': 'Sentence', 'level': 0, 'layer': 5, 'parent': None, 'children': [{'type': 'word', 'word': '저', 'tag': 'NNG', 'tagLabel': ['Noun', 'that'], 'children': [], 'parent': 14, 'level': -1, 'layer': 0, 'id': 1}, {'type': 'tree', 'tag': 'Object Phrase', 'level': 1, 'layer': 4, 'parent': 14, 'children': [{'type': 'tree', 'tag': 'Simple Noun Phrase', 'level': 2, 'layer': 3, 'parent': 10, 'children': [{'type': 'tree', 'tag': 'Adjectival Phrase', 'level': 3, 'layer': 2, 'parent': 8, 'children': [{'type': 'tree', 'tag': 'Adjective', 'level': 4, 'layer': 1, 'parent': 6, 'children': [{'type': 'word', 'word': '작', 'tag': 'VA', 'tagLabel': ['Adjective', 'to be small'], 'children': [], 'parent': 4, 'level': -1, 'layer': 0, 'id': 2}, {'type': 'word', 'word': '은', 'tag': 'ETM', 'tagLabel': ['Adjectival', 'Suffix'], 'children': [], 'parent': 4, 'level': -1, 'layer': 0, 'id': 3}], 'id': 4}, {'type': 'word', 'word': '소년', 'tag': 'NNG', 'tagLabel': ['Noun', 'boy'], 'children': [], 'parent': 6, 'level': -1, 'layer': 0, 'id': 5}], 'id': 6}, {'type': 'word', 'word': '밥', 'tag': 'NNG', 'tagLabel': ['Noun', 'meal'], 'children': [], 'parent': 8, 'level': -1, 'layer': 0, 'id': 7}], 'id': 8}, {'type': 'word', 'word': '을', 'tag': 'JKO', 'tagLabel': ['Object', 'Marker'], 'children': [], 'parent': 10, 'level': -1, 'layer': 0, 'id': 9}], 'id': 10}, {'type': 'tree', 'tag': 'Predicate', 'level': 1, 'layer': 1, 'parent': 14, 'children': [{'type': 'word', 'word': '먹', 'tag': 'VV', 'tagLabel': ['Verb', 'to eat'], 'children': [], 'parent': 13, 'level': -1, 'layer': 0, 'id': 11}, {'type': 'word', 'word': '다', 'tag': 'EF', 'tagLabel': ['Plain-form', 'Ending'], 'children': [], 'parent': 13, 'level': -1, 'layer': 0, 'id': 12}], 'id': 13}], 'id': 14}
+
+-------
+Tests complete
+Parse mismatch for sentence:  저 작은 소년 밥을 먹다.
+1 fails
